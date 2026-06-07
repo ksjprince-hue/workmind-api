@@ -1,59 +1,91 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# WorkMind AI
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+AI 기반 업무 분석 플랫폼 MVP
 
-## About Laravel
+## 프로젝트 소개
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+WorkMind AI는 OpenAI API를 활용하여 회의 내용과 문서를 자동 분석하는 AI 업무 생산성 플랫폼입니다.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Laravel 기반 REST API 서버와 TailwindCSS 기반 모바일 UI를 활용하여 개발하였습니다.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+## 주요 기능
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+* 회의 내용 AI 요약
+* TODO 자동 추출
+* PDF 문서 분석
+* 음성 회의 분석 구조 설계
+* SQLite 기반 분석 기록 저장
+* 모바일 앱 스타일 UI 구현
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-## Laravel Sponsors
+## 기술 스택
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### Backend
 
-### Premium Partners
+* Laravel 12
+* PHP
+* SQLite
+* OpenAI API
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+### Frontend
 
-## Contributing
+* Blade
+* TailwindCSS
+* Vite
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+---
 
-## Code of Conduct
+## AI 기능
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### 회의 분석
 
-## Security Vulnerabilities
+회의 내용을 입력하면 GPT 기반 AI가:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+* 핵심 요약
+* 해야 할 일(TODO)
+  을 자동 생성합니다.
 
-## License
+### PDF 분석
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+PDF 파일 내용을 추출하여:
+
+* 문서 요약
+* 핵심 키워드
+  를 분석합니다.
+
+### 음성 분석
+
+Whisper 기반 음성 회의 분석 구조를 구현하였습니다.
+
+---
+
+## 프로젝트 화면
+
+* 모바일 앱 스타일 UI
+* 다크모드 기반 디자인
+* iOS 감성 레이아웃
+
+---
+
+## 실행 방법
+
+```bash
+composer install
+npm install
+php artisan migrate
+npm run dev
+php artisan serve
+```
+
+---
+
+## 향후 개선 예정
+
+* 실시간 회의 분석
+* 사용자 로그인 기능
+* 클라우드 DB 연동
+* AI 기반 일정 추천 기능
+* 모바일 앱 배포
